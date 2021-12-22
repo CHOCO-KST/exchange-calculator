@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="MMS Exchange calculator ">
+    <meta name="description" content="This page is for calculate exchange rate and is a small project of MMS IT course.
+    Please using this program for free.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="MMS Exchange calculator ">
+    <meta property="og:description" content="This page is for calculate exchange rate and is a small project of MMS IT course.
+    Please using this program for free.">
+    <meta property="og:image" content="vendor/icons/Asset 3.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="MMS Exchange calculator ">
+    <meta property="twitter:description" content="This page is for calculate exchange rate and is a small project of MMS IT course.
+    Please using this program for free.">
+    <meta property="twitter:image" content="vendor/icons/Asset 3.png">
+
+    <link rel="icon" href="vendor/icons/Asset 3.png" type="image/icon type">
+    <title>Exchange Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="onload()">
+    <div class="cover-container">
+        <div class="nav-bar">
+            <div class="for-respone">
+                <div class="brand">
+                    <div class="logo">
+                        <img src="vendor/icons/main-logo.svg" alt="logo" >
+                    </div>
+                    <div class="brand-name">
+                        <span>MMEX</span>
+                    </div>
+                </div>
+                <div class="title">
+                    <span>Exchange Calculator</span>
+                </div>
+            </div>
+        </div>
+        <div class="page-body-container">
+            <div class="page-body">
+                <div class="cal-path">
+                    <div class="cal-top-div">
+                        <div class="input-div">
+                            <select name="from-country" id="from-country"></select>
+                            <img class="exchange-arrow" src="vendor/icons/exchange-arrow.svg" alt="logo" >
+                            <select name="to-country" id="to-country">
+                                <option value="1">MMK</option>
+                            </select>
+                        </div>
+                        <div class="cal-div"></div>
+                    </div>
+                    <div class="cal-bottom-div">
+                        <div class="input-div">
+                            <input type="number" name="from" id="from" placeholder="From">
+                            <input type="number" name="to" id="to" placeholder="To">
+                        </div>
+                        <div class="cal-div hide-btn-2">
+                            <input id="cal-btn" type="button" value="Calculate">
+                        </div>
+                    </div>
+                </div>
+                <div class="hide-btn-1">
+                    <input id="cal-btn" type="button" value="Calculate">
+                </div>
+                <div class="table-div">
+                    <table class="data-table">
+                        <tr style="background-color: #668DCC;">
+                            <td>No</td>
+                            <td>Date</td>
+                            <td>From</td> 
+                            <td>Input</td>
+                            <td>To</td>
+                            <td>Result</td>
+                        </tr>
+                        <tbody id="tbody">
+                        </tbody>
+                    </table>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

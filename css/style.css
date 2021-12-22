@@ -1,0 +1,295 @@
+:root {
+    --background_color : #002760;
+    --nav_bar : rgba(255, 255, 255, 0.25);
+    --cal_data_bg : rgba(196, 196, 196, 0.5);
+    --cal_btn : #97C4FF;
+    --text_white : #DEDEDE;
+    --text_black : #000;
+    --top_row : #176ffd;
+    --bottom_row : #0082fc;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;600&display=swap');
+/* Light 300 , Semi-bold 600 */
+
+@font-face {
+    font-family: 'notosan';
+    font-weight: normal;
+    src: url('vendor/fonts/NotoSansMyanmar-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'notosan';
+    font-weight: bold;
+    src: url('vendor/fonts/NotoSansMyanmar-Bold.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif , 'notosan';
+}
+
+html {
+    font-size: 100%;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+.cover-container {
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(0,39,96);
+    background: linear-gradient(285deg, rgba(0,39,96,1) 0%, rgba(71,147,246,1) 29%, rgba(0,39,96,1) 100%);  
+}
+
+/* navagation bar path */
+.nav-bar {
+    height: 3.75rem;
+    background-color: var(--nav_bar);
+    color: var(--text_white);
+}
+
+.for-respone {
+    max-width: 1366px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.brand,
+.title {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.logo img {
+    height: 80%;
+}
+
+.brand-name {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0 1rem;
+}
+
+/* page body path */
+.page-body-container {
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+.page-body {
+    width: 97.5%;
+    margin: 0 auto;
+    background-color: var(--cal_data_bg);
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px 5px rgba(77, 91, 117, 0.493);
+}
+
+/* calculation path */
+.cal-path {
+    min-height: 12rem;
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+input,
+select {
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    /*width need to responsive  */
+    width: 16rem;       
+    height: 3rem;
+    text-align: center;
+}
+
+input:focus,
+select:active {
+    outline: none;
+}
+
+.input-div input {
+    text-align: right;
+    padding-right: 2rem;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.cal-top-div,
+.cal-bottom-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input-div {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.exchange-arrow {
+    height: 2rem;
+    align-self: center;
+}
+
+.cal-div {
+    flex: 1.25;
+    display: flex;
+    justify-content: end;
+}
+
+#cal-btn {
+    background-color: var(--cal_btn);
+    border: none;
+    box-shadow: 0 0 10px rgba(56, 56, 56, 0.356);
+}
+
+#cal-btn:active {
+    background-color: var(--top_row);
+}
+
+.cal-bottom-div {
+    margin-top: 3.5rem;
+}
+
+/* table data path */
+.table-div {
+    width: 90%;      
+    height: 30rem;
+    margin: 0 auto;
+    overflow-y: scroll;
+    margin-bottom: 3rem;
+}
+
+.data-table {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--text_white);
+}
+
+tr {
+    height: 3.5rem;
+}
+
+td {
+    text-align: center;
+}
+
+.hide-btn-1 {
+    display: none;
+}
+
+@media screen and (max-width: 1080px) {
+    input,
+    select {
+        width: 13rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    input,
+    select {
+        width: 10rem;
+    }
+    .data-table {
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .cal-path {
+        width: 75%;
+    }
+    .cal-bottom-div {
+        flex-direction: column;
+    }
+    .cal-top-div .cal-div {
+        display: none;
+    }
+    .data-table {
+        font-size: 1.5rem;
+    }
+    .cal-div {
+        justify-content: center;
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    html {
+        font-size: 80%;
+    }
+    .nav-bar {
+        height: 7.5rem;
+    }
+    .for-respone {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cal-path {
+        flex-direction: row;
+        width: 95%;
+    }
+    .input-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    }
+    .cal-top-div,
+    .cal-bottom-div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    }
+    .hide-btn-1 {
+        display: block;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3rem;
+    }
+    .hide-btn-2 {
+        display: none;
+    }
+}

@@ -1,0 +1,42 @@
+
+
+
+
+
+.table-div {
+    width: 1090px;
+    height: 560px;
+    margin: 0 auto;
+    overflow-y: scroll;
+}
+
+*::-webkit-scrollbar {
+    width: 0px;
+}
+
+.data-table {
+    width: 100%;
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--text_white);
+}
+
+tr {
+    height: 60px;
+}
+
+td {
+    text-align: center;
+}
+
+@media screen and (max-width : 470px) {
+   body {
+       background-repeat: no-repeat;
+       background-position: center;
+       background-size: cover;
+   }
+   .nav-bar,
+   .body{
+       width: 95%;
+   }
+}
