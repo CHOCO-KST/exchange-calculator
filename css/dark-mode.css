@@ -1,0 +1,57 @@
+:root {
+    --dark-primary: rgb(0, 12, 31);
+    --dark-soft-primary: rgb(0, 20, 51);
+    --dark-background: rgba(177, 177, 177, 0.3);
+}
+
+.dark-mode .cover-container {
+    background: rgb(0, 12, 31);
+    background: linear-gradient(285deg, rgb(0, 12, 31) 0%, rgba(0,39,96,1) 29%, rgb(0, 12, 31) 100%);  
+}
+
+.dark-mode .nav-bar {
+    background-color: var(--dark-background);
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode #cal-btn {
+    color: white;
+    background-color: var(--dark-primary);
+}
+
+.dark-mode #cal-btn:active {
+    background-color: var(--dark-soft-primary);
+}
+
+.dark-mode .page-body {
+    background-color: var(--dark-background);
+    box-shadow: 0 0 10px 5px rgba(32, 37, 48, 0.493);
+} 
+
+.dark-mode .table-div tr {
+    color: black;
+}
+
+.hide-icon {
+    display: none;
+}
+
+#dark-mode-btn {
+    width: 4rem;
+    height: 4rem;
+    background-color: rgb(189, 189, 189);
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.dark-mode #dark-mode-btn {
+    background-color: rgb(39, 39, 39);
+    color: white;
+}

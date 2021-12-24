@@ -5,6 +5,9 @@ const input_from = document.getElementById('from')
 const input_to = document.getElementById('to')
 const tbody = document.getElementById('tbody')
 const cal_btn = document.getElementById('cal-btn');
+const dark_mode_btn = document.getElementById('dark-mode-btn')
+const day_icon = document.getElementById('day-mode')
+const night_icon = document.getElementById('night-mode')
 
 // variable
 const rates = data.rates;
@@ -16,6 +19,7 @@ let mobile_view = false;
 cal_btn.addEventListener('click',cal_with_btn);
 input_from.addEventListener('keyup',function(e) { cal_with_from(e)} );
 input_to.addEventListener('keyup',function(e) { cal_with_to(e)} )
+dark_mode_btn.addEventListener('click',dark_mode_toggle)
 
 // onload function
 function onload() {
@@ -151,4 +155,10 @@ function create_tr(data,not_onload = false,no_data = false) {
 function addTo_localStroage(arr) {
     localStorage.setItem("exchange_id-"+arr[0],arr)
     localStorage.setItem('exchange_data',arr[0])
+}
+
+function dark_mode_toggle() {
+    document.body.classList.toggle('dark-mode')
+    day_icon.classList.toggle('hide-icon')
+    night_icon.classList.toggle('hide-icon')
 }

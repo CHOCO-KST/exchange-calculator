@@ -31,19 +31,23 @@
     font-family: 'Jost', sans-serif , 'notosan';
 }
 
+*::-webkit-scrollbar {
+    width: 0;
+}
+
 html {
     font-size: 100%;
 }
 
-*::-webkit-scrollbar {
-    width: 0;
+body {
+    position: relative;
 }
 
 .cover-container {
     width: 100%;
     min-height: 100vh;
-    background: rgb(0,39,96);
-    background: linear-gradient(285deg, rgba(0,39,96,1) 0%, rgba(71,147,246,1) 29%, rgba(0,39,96,1) 100%);  
+    background: rgb(0, 60, 150);
+    background: linear-gradient(285deg, rgb(0, 60, 150) 0%, rgba(71,147,246,1) 29%, rgb(0, 60, 150) 100%);  
 }
 
 /* navagation bar path */
